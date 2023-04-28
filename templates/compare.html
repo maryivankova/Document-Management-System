@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Сравнить документы</title>
+</head>
+<body>
+    <h1>Сравнить документы</h1>
+    <h2>Текущая версия</h2>
+    <div>
+        <h3>{{ document.name }}</h3>
+        <p>{{ document.content }}</p>
+    </div>
+    {% if history %}
+    <h2>Последняя версия</h2>
+    <div>
+        <h3>{{ history.version }}: {{ history.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</h3>
+        <p>{{ history.content }}</p>
+    </div>
+    {% else %}
+    <div>
+        <p>{{ message }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>

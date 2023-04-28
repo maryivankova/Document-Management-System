@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Изменить документ</title>
+</head>
+<body>
+    <h1>Изменить документ</h1>
+    <form action="{{ url_for('edit_document', id=document.id) }}" method="post">
+        <div>
+            <label for="name">Наименование:</label>
+            <input type="text" id="name" name="name" value="{{ document.name }}">
+        </div>
+        <div>
+            <label for="content">Содержание:</label>
+            <textarea id="content" name="content">{{ document.content }}</textarea>
+        </div>
+        <button type="submit">Сохранить</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавить документ</title>
+</head>
+<body>
+    <h1>Добавить документ</h1>
+    <form action="{{ url_for('add_document') }}" method="post">
+        <div>
+            <label for="name">Наименование:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div>
+            <label for="content">Содержание:</label>
+            <textarea id="content" name="content"></textarea>
+        </div>
+        <button type="submit">Добавить</button>
+    </form>
+</body>
+</html>
